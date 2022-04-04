@@ -5,13 +5,29 @@ using SalesSystem;
 
 Console.WriteLine("=============");
 
-try
+Employee employee1 = new SalaryEmployee()
 {
-    Console.WriteLine(new Date(2022, 12, 31));
-    Console.WriteLine(new Date(2024, 02, 29));
-    Console.WriteLine(new Date(2022, 01, 5));
-}
-catch (Exception error)
+    Id = 1010,
+    FirstName = "Paula",
+    LastName = "chocano",
+    BirthDate = new Date(1990, 01, 22),
+    HiringDate = new Date(1990, 01, 22),
+    IsActive = true,
+    Salary = 1825369
+};
+
+Console.WriteLine(employee1);
+
+Employee employee2 = new CommissionEmployee()
 {
-    Console.WriteLine(error.Message);
-}
+    Id = 1010,
+    FirstName = "Lucia",
+    LastName = "Mendieta",
+    BirthDate = new Date(1996, 01, 22),
+    HiringDate = new Date(2021, 01, 1),
+    IsActive = true,
+    Sales = 320000000M,
+    CommissionPercentaje = 0.03F
+};
+
+Console.WriteLine(employee2);
